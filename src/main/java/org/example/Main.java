@@ -27,6 +27,26 @@ public class Main {
                     }
                     ruleta.mostrarInfo();
                 }
+                case 2->{
+                    if (ruleta.getJugadores().size() < 6) {
+                        System.out.println("No hay completado los jugadores para iniciar, por favor ingresa los jugadores en el menu opcion 1.");
+                        break;
+                    }
+                    System.out.println("MUCHA SUERTEEEE!");
+                    System.out.println("\nGirando Tamborrrr...");
+                    System.out.println("\nGirando Tamborrrr........");
+                    while (ruleta.getJugadores().size() > 1) {
+                        System.out.println("\nPresiona Enter para disparar..");
+                        input.nextLine();
+                        ruleta.disparar();
+                        ruleta.mostrarInfo();
+                    }
+                    System.out.println("El juego TERMINO......");
+                    System.out.println("EL GANADOR ES: " + ruleta.getJugadores().get(0));
+                }
+                case 3->{
+                    System.out.println("Saliendo... vuelve prontooo....");
+                }
             }
         }while (opcion!=3);
     }

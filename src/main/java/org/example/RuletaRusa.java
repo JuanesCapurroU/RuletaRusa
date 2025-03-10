@@ -53,6 +53,7 @@ public class RuletaRusa {
     }
 
     public RuletaRusa() {
+        this.random = new Random();
     }
 
     public RuletaRusa(List<String> jugadores, Random random, int posicionarBala, int posicionActual) {
